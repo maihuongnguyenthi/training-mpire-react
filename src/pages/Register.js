@@ -1,5 +1,4 @@
 import logo from '../logo-black.svg';
-import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { XIcon } from '@heroicons/react/outline';
 import { FaSpinner } from 'react-icons/fa';
@@ -25,15 +24,13 @@ function Register() {
         <img src={logo} alt="Logo" className="mb-20 w-24 h-24" />
       </div>
 
-      <div className='flex flex-row space-x-16 items-start justify-center items-center h-screen bg-gray-50 p-4'>
+      <div className='flex flex-row space-x-16 justify-center items-center h-screen bg-gray-50 p-4'>
         <div className="">
-          <h1 className="text-3xl font-semibold mb-2">Choose Hub to</h1>
-          <h1 className="text-3xl font-semibold mb-2">create your flow</h1>
+          <div className="w-[484px] text-[#222021] text-[56px] font-medium font-['Helvetica Neue LT Pro'] leading-[66px]">Choose Hub to create your flow</div>
         </div>
 
         <div className="relative bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
-          <div className="scrollbar-custom space-y-4 overflow-y-auto max-h-60 pr-2 scrollbar-thin scrollbar-thumb-gray-300
-                         scrollbar-track-gray-100">
+          <div className="scrollbar-custom space-y-4 overflow-y-auto max-h-60 pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
             {hubs.map((hub) => (
               <div
                 key={hub.id}
@@ -50,12 +47,13 @@ function Register() {
                     checked={selectedHub === hub.id}
                     disabled={hub.status === 'Inactive' || hub.status === 'Restarting...'}
                     onChange={() => setSelectedHub(hub.id)}
-                    className={`mr-4 mt-1 text-orange-500 focus:ring-orange-500 ${hub.status === 'Inactive' ?
+                    className={`cursor-pointer mr-4 mt-1 text-orange-500 focus:ring-orange-500 ${hub.status === 'Inactive' ?
                       'opacity-50 cursor-not-allowed' : ''}`}
                   />
                 )}
                 <div className="flex flex-col flex-grow">
-                  <span className={`font-medium ${hub.status === 'Inactive' ? 'text-gray-400' : ''}`}>
+                  <span className={`font-medium grow shrink basis-0 h-[30px] text-lg font-['Helvetica Neue LT Pro'] leading-[23px] 
+                                  ${hub.status === 'Inactive' ? 'text-gray-400' : 'text-[#222021]'}`}>
                     {hub.name}
                   </span>
                   <span
@@ -79,7 +77,7 @@ function Register() {
           </div>
 
           <button
-            className={`mt-6 w-20 pb-1 rounded-md ml-40 ${selectedHub === null
+            className={`mt-6 pb-1 rounded-md ml-40 w-24 h-7 text-center text-lg font-medium font-['Helvetica Neue LT Pro'] leading-[23px] ${selectedHub === null
               ? 'bg-[#f5f5f5] text-black font-semibold border-2 border-black cursor-not-allowed'
               : 'bg-orange-500 hover:bg-orange-600 text-white'
               }`}
