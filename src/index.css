@@ -16,28 +16,26 @@ code {
     monospace;
 }
 
-/* Tùy chỉnh thanh cuộn cho trình duyệt sử dụng Webkit (Chrome, Safari) */
 .scrollbar-custom::-webkit-scrollbar {
-  width: 4px; /* Độ rộng thanh cuộn nhỏ */
+  width: 4px;
   background: red;
 }
 
 .scrollbar-custom::-webkit-scrollbar-track {
-  border-radius: 30px; /* Làm đường ray thanh cuộn tròn hơn */
-  background: #f5f5f5; /* Màu nền của đường ray thanh cuộn */
+  border-radius: 30px;
+  background: #f5f5f5;
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb {
-  border-radius: 10px; /* Làm thanh cuộn tròn */
-  background: #b0b0b0; /* Màu của thanh cuộn */
+  border-radius: 10px;
+  background: #b0b0b0;
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb:hover {
-  background: #a0a0a0; /* Màu của thanh cuộn khi di chuột qua */
+  background: #a0a0a0;
 }
 
-/* Tùy chỉnh cho Firefox */
 .scrollbar-custom {
-  scrollbar-width: thin; /* Làm cho thanh cuộn mảnh hơn */
-  scrollbar-color: #b0b0b0 #f5f5f5; /* Màu thanh cuộn và nền */
+  scrollbar-width: thin;
+  scrollbar-color: #b0b0b0 #f5f5f5;
 }
