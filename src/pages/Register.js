@@ -1,5 +1,6 @@
 import logo from '../logo-black.svg';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { XIcon } from '@heroicons/react/outline';
 import { FaSpinner } from 'react-icons/fa';
 
@@ -13,11 +14,23 @@ function Register() {
     { id: 6, name: 'Hub 6 Lorem ipsum dolor sit amet', status: 'Active' },
   ];
 
+  const navigate = useNavigate();
+
   const [hubs, setHubs] = useState(listHubs);
   const [selectedHub, setSelectedHub] = useState(null);
 
   const removeInactiveHub = (id) => {
     setHubs(hubs.filter((hub) => hub.id !== id));
+  };
+
+  const handleSubmut = (selectedHub) => {
+    if (selectedHub !== null) {
+      console.log("Selected Hub:", selectedHub);
+
+      navigate('/services');
+    } else {
+      console.warn("Please select a hub before proceeding");
+    }
   };
 
   return (
@@ -82,6 +95,7 @@ function Register() {
 
             <div className="min-w-80 flex justify-center mt-6">
               <button
+                onClick={() => handleSubmut(selectedHub)}
                 className={`pb-1 rounded-md w-24 h-10 text-center text-lg font-medium leading-[23px] ${selectedHub === null
                   ? 'bg-[#f5f5f5] text-black font-semibold border-2 border-black cursor-not-allowed'
                   : 'bg-orange-500 hover:bg-orange-600 text-white'

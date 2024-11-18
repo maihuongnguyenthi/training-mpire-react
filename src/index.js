@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import Welcome from './pages/Welcome';
+import Layout from './pages/Layout';
+import Home from './pages/Home';
 import Register from './pages/Register';
 import NoPage from "./pages/NoPage";
 
@@ -12,6 +14,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
+        <Route path="/services" element={<Layout />}>
+          <Route index element={<Home />} />
+        </Route>
         <Route path="/" element={<Welcome />}></Route>
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<NoPage />} />
