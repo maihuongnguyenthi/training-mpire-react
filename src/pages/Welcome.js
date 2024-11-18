@@ -1,25 +1,29 @@
 import logo from '../logo.svg';
+import backgroundImageWelCome from '../backgroundImageWelCome.jpg'
 import { Link } from 'react-router-dom';
 
 function Welcome() {
   return (
     <div
-      className="relative min-h-screen w-full bg-cover bg-center flex items-center overflow-hidden bg-fixed bg-no-repeat"
+      className="backdrop-brightness-50 relative min-h-screen w-full 
+       bg-cover bg-center flex items-center overflow-hidden bg-fixed bg-no-repeat"
       style={{
-        backgroundImage: `url('https://s3-alpha-sig.figma.com/img/30ab/9054/6f99b7857bb70a663cc1ae5d47adc300?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NB5xIBHc5dcj11M8eYO6bdSojkZ3X-Djqklvzs3yL~U47sG4OJF8Z7wkRSQbVJXFPeiAKu0zyGPQ1KgHNQnb43T-OHeaZr1PzKVrofX4kucN3n86p0rxT42wECqkXQ3sg~KmG0oSLQrVSuuLrhc-ZHGEaJFUiWtDGlRXVD0jAoiVtJsNzUJ-kaR06znZcIEtv1Qv-1OaEXe7zLLibgHzIqUVcKK7bl5q3Y0XkNyaqc4JN9XcZAML~YDqvy1sfNo4ca8dyW5xANrCcg~GEQTmQCZcoh~~NimbY6s69qZDuW7fAKKA3sya7Vp-76d1PDZbThMRgVvpGHDqnaVCYltVgA__')`,
+        backgroundImage: `url(${backgroundImageWelCome})`,
         backgroundSize: 'cover', backgroundPosition: 'center',
       }}
-    >
-      <div className=" inset-0 bg-black opacity-50"></div>
 
-      <div className="text-white max-w-[891px] mx-auto">
-        <img src={logo} alt="Logo" className="mb-[20px] w-24 h-24" />
-        <div className="w-[891px] text-white text-[90px] font-medium font-['Helvetica Neue LT Pro']]">Welcome to<br />Advanced Flow</div>
-        <div className="text-white text-2xl font-medium font-['Helvetica Neue LT Pro'] ">Please log in to continue</div>
-        <Link to="/register" className="px-4 mt-5 inline-block py-3 min-w-32 rounded-[10px] w-32  border border-white text-center text-white text-lg font-medium font-['Helvetica Neue LT Pro'] ">
-          Log in
-        </Link>
+    >
+      <div className="container">
+        <div className="text-white px-16 md:px-48 lg:px-80 space-y-8 font-medium">
+          <img src={logo} alt="Logo" className="mb-md w-24 h-24" />
+          <div className="text-5xl md:text-7xl lg:text-8xl">Welcome to<br />Advanced Flow</div>
+          <div className="pt-4 text-2xl">Please log in to continue</div>
+          <Link to="/register" className="px-4 mt-5 inline-block py-3 min-w-32 rounded-[10px] w-32  border border-white text-center text-white text-lg">
+            Log in
+          </Link>
+        </div>
       </div>
+
     </div>
   );
 }
