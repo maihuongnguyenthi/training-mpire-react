@@ -132,9 +132,9 @@ const Layout = () => {
                                     <option>Công ty Hoa Tiêu Tân Cảng 3</option>
                                 </select>
                             </div>
-                            <p className='pt-6' >Hotline: 028 37423565</p>
-                            <p>Fax: (+84) 28.37423565</p>
-                            <div className='inline-flex space-x-4'>
+                            <p className='pt-6 text-end' >Hotline: 028 37423565</p>
+                            <p className='text-end'>Fax: (+84) 28.37423565</p>
+                            <div className='inline-flex space-x-4 text-end'>
                                 <FaFacebookF className="text-[#4758ef]" />
                                 <CiYoutube className="text-[#4758ef]" />
                                 <FaInstagram className="text-[#4758ef]" />
