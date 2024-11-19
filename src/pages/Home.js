@@ -5,7 +5,7 @@ import { ChevronDown, Calendar, Clock } from 'lucide-react';
 
 const Home = () => {
   return (
-    <div className="mt-24 px-28 bg-[#f0f8ff]">
+    <div className=" mt-24 px-0 md:px-28 bg-[#f0f8ff] min-w-full ">
 
       <div className=" py-10 flex space-x-3 text-gray-500 ">
         <p className="text-[#4758ef]">Trang chủ</p>
@@ -43,35 +43,41 @@ const Home = () => {
       </div>
 
       <div className="py-10 space-y-8">
-
-        <p className="text-[#00327d] text-center text-2xl pb-6">BÁO GIÁ DỊCH VỤ</p>
-
-        <div className="w-full bg-white space-y-8 p-12 ">
-          <input className=' placeholder:text-red-400 placeholder:text-lg
-           block w-full py-3 pr-3 border-b-2 border-red-400
+        <h1 className="text-2xl text-blue-500 font-medium text-center mb-12">Báo giá dịch vụ</h1>
+        <div className="bg-white rounded-lg p-6 shadow-sm">
+          <input className=' placeholder:text-red-500 placeholder:text-lg mb-6
+           block w-full py-3 pr-3 border-b-2 border-red-500
         focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm' placeholder="Thông tin tàu" type="text" name="hovaten">
           </input>
 
-          <div className="flex justify-between space-x-24">
-            <div className=" flex-grow">
-              <label htmlFor="username" className="block text-md font-medium text-gray-400 py-1">
-                Quốc tịch *
+          <div className="grid grid-cols-2 gap-6">
+            <div>
+              <label className="block text-sm mb-2">
+                Quốc tích<span className="text-red-500">*</span>
               </label>
-              <input className='placeholder:text-gray-400 block bg-slate-100 w-full py-3 pl-6 pr-3 shadow-sm 
-    focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm' placeholder="Chọn" type="text" name="hovaten">
-              </input>
+              <div className="relative">
+                <select className="w-full p-3 bg-gray-50 border border-gray-200 rounded-md appearance-none">
+                  <option>Chọn</option>
+                </select>
+                <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                  <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
             </div>
 
-            <div className=" flex-grow">
-              <label htmlFor="username" className="block text-md font-medium text-gray-400 py-1">
-                Trọng tải (mt)*
+            <div>
+              <label className="block text-sm mb-2">
+                Trọng tải (mt)<span className="text-red-500">*</span>
               </label>
-              <input className='placeholder:text-gray-400 block bg-slate-100 w-full py-3 pl-6 pr-3 shadow-sm 
-    focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm' placeholder="Nhập thông tin" type="text" name="hovaten">
-              </input>
+              <input
+                type="text"
+                placeholder="Nhập thông tin"
+                className="w-full p-3 bg-gray-50 border border-gray-200 rounded-md"
+              />
             </div>
           </div>
-
         </div>
 
         <div className="max-w-full bg-white p-4">
