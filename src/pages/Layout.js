@@ -113,13 +113,15 @@ const Layout = () => {
                     </div>
 
                 </div>
-                <div className='bg-white'>
-                    <div className='flex justify-around py-6'>
+                <div className='bg-white px-40'>
+
+                    <div className='flex justify-between py-6'>
                         <div className='space-y-4'>
                             <img src={logoTanCang} alt="logoTanCang" className="h-16" />
                             <p className='pt-6'>phonghoatieu@saigonnewport.com.vn</p>
                             <p>470 Đồng Văn Cống, phường Thạnh Mỹ Lợi, Thủ Đức, TP. HCM</p>
                         </div>
+
                         <div className='space-y-4'>
                             <div className=''>
                                 <select
@@ -132,9 +134,10 @@ const Layout = () => {
                                     <option>Công ty Hoa Tiêu Tân Cảng 3</option>
                                 </select>
                             </div>
+
                             <p className='pt-6 text-end' >Hotline: 028 37423565</p>
                             <p className='text-end'>Fax: (+84) 28.37423565</p>
-                            <div className='inline-flex space-x-4 text-end'>
+                            <div className='inline-flex space-x-4 text-end items-end pl-10'>
                                 <FaFacebookF className="text-[#4758ef]" />
                                 <CiYoutube className="text-[#4758ef]" />
                                 <FaInstagram className="text-[#4758ef]" />
@@ -144,6 +147,7 @@ const Layout = () => {
                             </div>
                         </div>
                     </div>
+
                     <div className='inline-flex space-x-4'>
                         <p>© Copyright 2023 – CÔNG TY TNHH MỘT THÀNH VIÊN HOA TIÊU TÂN CẢNG</p>
                         <p>Quy định & điều khoản</p>
