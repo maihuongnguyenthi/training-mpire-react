@@ -7,6 +7,7 @@ import Welcome from './pages/Welcome';
 import Layout from './pages/Layout';
 import Home from './pages/Home';
 import Register from './pages/Register';
+import Registration from './pages/Registration';
 import NoPage from "./pages/NoPage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,6 +20,7 @@ root.render(
         </Route>
         <Route path="/" element={<Welcome />}></Route>
         <Route path="/register" element={<Register />} />
+        <Route path="/registration" element={<Registration />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>

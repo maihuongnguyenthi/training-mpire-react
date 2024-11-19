@@ -84,7 +84,6 @@ const Layout = () => {
                         backgroundImage: `url(${imgFooter})`,
                         backgroundSize: 'cover', backgroundPosition: 'center',
                     }}
-
                 >
                     <div className="absolute container md:flex justify-around top-8 px-4 md:top-20 md:px-16 flex-shrink">
                         <div className="text-white font-thin text-3xl md:text-6xl space-y-2 pb-4">
@@ -116,10 +115,7 @@ const Layout = () => {
 
                 </div>
                 <div className='bg-white px-0 md:px-40'>
-
                     <div className=" mx-auto px-4 py-6">
-
-
                         <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
                             <div className="flex flex-col space-y-2">
                                 <img src={logoTanCang} alt="logoTanCang" className="h-16 w-40" />
@@ -176,7 +172,6 @@ const Layout = () => {
                                     </Link>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 

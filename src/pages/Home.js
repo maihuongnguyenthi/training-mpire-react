@@ -1,6 +1,6 @@
 import { SlArrowRight } from "react-icons/sl";
 import { FaAddressCard, FaBitcoin, FaAddressBook } from "react-icons/fa";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 import ServiceHT from './components/ServiceHT';
@@ -20,12 +20,16 @@ const Home = () => {
     }));
   };
 
+  useEffect(() => {
+    setIsSubmitted(false);
+  }, [services]);
+
   const handleSubmit = () => {
     setIsSubmitted(true);
   };
+  
   return (
     <div className=" mt-24 px-0 md:px-28 bg-[#f0f8ff] min-w-full ">
-
       <div className="px-2 md-px-0 py-10 flex space-x-3 text-gray-500 ">
         <p className="text-[#4758ef]">Trang chủ</p>
         <div className="py-1">
@@ -105,7 +109,6 @@ const Home = () => {
               <input
                 type="checkbox"
                 className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                defaultChecked
                 checked={services.hoaTieu}
                 onChange={() => handleServiceChange('hoaTieu')}
               />
@@ -124,7 +127,6 @@ const Home = () => {
               <input
                 type="checkbox"
                 className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                defaultChecked
                 checked={services.dichChuyen}
                 onChange={() => handleServiceChange('dichChuyen')}
               />
