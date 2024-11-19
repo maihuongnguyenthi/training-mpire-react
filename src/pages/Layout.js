@@ -8,6 +8,7 @@ import { CiYoutube } from "react-icons/ci";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { AiOutlineMail } from "react-icons/ai";
 import { SiZalo } from "react-icons/si";
+import { Link } from 'react-router-dom';
 
 
 const Layout = () => {
@@ -31,14 +32,14 @@ const Layout = () => {
                         </li>
                     </ul>
                     <ul className="hidden md:inline-flex m-auto space-x-16">
-                        <li className="">Giới thiệu</li>
-                        <li className="">Dịch vụ</li>
-                        <li className="">Tin tức</li>
-                        <li className="">Thư viện</li>
-                        <li className="">Hỗ Trợ</li>
+                        <li>Giới thiệu</li>
+                        <li>Dịch vụ</li>
+                        <li>Tin tức</li>
+                        <li>Thư viện</li>
+                        <li>Hỗ Trợ</li>
                     </ul>
                     <ul className="my-auto space-x-4 hidden md:inline-flex">
-                        <li className="">
+                        <li>
                             <div className="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full shadow-md cursor-pointer hover:bg-gray-200">
                                 <FaSearch className="text-gray-400 text-sm font-thin" />
                             </div>
@@ -78,7 +79,7 @@ const Layout = () => {
 
             <footer>
                 <div
-                    className="relative min-h-[550px] min-w-full bg-cover bg-center overflow-hidden bg-no-repeat"
+                    className="relative min-h-[650px] md:min-h-[550px] min-w-full bg-cover bg-center overflow-hidden bg-no-repeat"
                     style={{
                         backgroundImage: `url(${imgFooter})`,
                         backgroundSize: 'cover', backgroundPosition: 'center',
@@ -144,35 +145,35 @@ const Layout = () => {
                                         </select>
                                     </div>
                                 </div>
-                                <div className="flex justify-end space-x-4">
+                                <div className="flex md:justify-end space-x-4">
                                     <div className="text-blue-600">
                                         Hotline: <a href="tel:02837423565" className="hover:underline">028 37423565</a>
                                     </div>
                                 </div>
-                                <div className="flex justify-end space-x-4">
+                                <div className="flex md:justify-end space-x-4">
                                     <div className="text-blue-600">
                                         Fax: <span>(+84) 28.37423566</span>
                                     </div>
                                 </div>
-                                <div className="flex justify-end space-x-4">
-                                    <a href="#" className="text-blue-500 hover:text-blue-700">
+                                <div className="flex md:justify-end space-x-4">
+                                    <Link href="#" className="text-blue-500 hover:text-blue-700">
                                         <FaFacebookF className="text-[#4758ef]" />
-                                    </a>
-                                    <a href="#" className="text-red-500 hover:text-red-700">
+                                    </Link>
+                                    <Link href="#" className="text-red-500 hover:text-red-700">
                                         <CiYoutube className="text-[#4758ef]" />
-                                    </a>
-                                    <a href="#" className="text-pink-500 hover:text-pink-700">
+                                    </Link>
+                                    <Link href="#" className="text-pink-500 hover:text-pink-700">
                                         <FaInstagram className="text-[#4758ef]" />
-                                    </a>
-                                    <a href="#" className="text-blue-700 hover:text-blue-900">
+                                    </Link>
+                                    <Link href="#" className="text-blue-700 hover:text-blue-900">
                                         <FaLinkedinIn className="text-[#4758ef]" />
-                                    </a>
-                                    <a href="#" className="text-gray-500 hover:text-gray-700">
+                                    </Link>
+                                    <Link href="#" className="text-gray-500 hover:text-gray-700">
                                         <AiOutlineMail className="text-[#4758ef]" />
-                                    </a>
-                                    <a href="#" className="text-blue-400 hover:text-blue-600">
+                                    </Link>
+                                    <Link href="#" className="text-blue-400 hover:text-blue-600">
                                         <SiZalo className="text-[#4758ef]" />
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -186,11 +187,11 @@ const Layout = () => {
                                     © Copyright 2023 - CÔNG TY TNHH MỘT THÀNH VIÊN HOA TIÊU TÂN CẢNG
                                 </div>
                                 <div className="flex flex-wrap justify-center md:justify-end gap-4">
-                                    <a href="#" className="hover:text-blue-500">Quy định & điều khoản</a>
-                                    <a href="#" className="hover:text-blue-500">Chính sách bảo mật</a>
-                                    <a href="#" className="hover:text-blue-500">Chính sách cookie</a>
-                                    <a href="#" className="hover:text-blue-500">Sitemap</a>
-                                    <a href="#" className="hover:text-blue-500">Tổng công ty</a>
+                                    <Link href="#" className="hover:text-blue-500">Quy định & điều khoản</Link>
+                                    <Link href="#" className="hover:text-blue-500">Chính sách bảo mật</Link>
+                                    <Link href="#" className="hover:text-blue-500">Chính sách cookie</Link>
+                                    <Link href="#" className="hover:text-blue-500">Sitemap</Link>
+                                    <Link href="#" className="hover:text-blue-500">Tổng công ty</Link>
                                 </div>
                             </div>
                         </div>

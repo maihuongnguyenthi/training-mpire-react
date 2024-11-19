@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className=" mt-24 px-0 md:px-28 bg-[#f0f8ff] min-w-full ">
 
-      <div className=" py-10 flex space-x-3 text-gray-500 ">
+      <div className="px-2 md-px-0 py-10 flex space-x-3 text-gray-500 ">
         <p className="text-[#4758ef]">Trang chủ</p>
         <div className="py-1">
           <SlArrowRight className="w-3 h-3 font-normal " />
@@ -15,7 +15,7 @@ const Home = () => {
         <p>Báo giá</p>
       </div>
 
-      <div className="flex space-x-6 justify-center">
+      <div className="flex space-x-6 justify-center px-2">
         <div className="space-y-3">
           <div className="w-10 h-10 flex mx-auto items-center justify-center bg-[#4758ef] rounded-full shadow-md cursor-pointer hover:bg-gray-200">
             <FaAddressCard className="text-white text-xl font-thin" />
