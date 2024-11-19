@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import logoTanCang from '../logoTanCang.jpg';
 import imgFooter from '../imgFooter.jpg';
 import { FaSearch, FaBars, FaTimes, FaFacebookF, FaInstagram } from 'react-icons/fa';
+import { Mail, MapPin } from 'lucide-react';
 import { CiYoutube } from "react-icons/ci";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { AiOutlineMail } from "react-icons/ai";
@@ -113,48 +114,86 @@ const Layout = () => {
                     </div>
 
                 </div>
-                <div className='bg-white px-40'>
+                <div className='bg-white px-0 md:px-40'>
 
-                    <div className='flex justify-between py-6'>
-                        <div className='space-y-4'>
-                            <img src={logoTanCang} alt="logoTanCang" className="h-16" />
-                            <p className='pt-6'>phonghoatieu@saigonnewport.com.vn</p>
-                            <p>470 Đồng Văn Cống, phường Thạnh Mỹ Lợi, Thủ Đức, TP. HCM</p>
-                        </div>
+                    <div className=" mx-auto px-4 py-6">
 
-                        <div className='space-y-4'>
-                            <div className=''>
-                                <select
-                                    id="company"
-                                    name="company"
-                                    className="block min-w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm/6"
-                                >
-                                    <option >Công ty Hoa Tiêu Tân Cảng</option>
-                                    <option>Công ty Hoa Tiêu Tân Cảng 2</option>
-                                    <option>Công ty Hoa Tiêu Tân Cảng 3</option>
-                                </select>
+
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+                            <div className="flex flex-col space-y-2">
+                                <img src={logoTanCang} alt="logoTanCang" className="h-16 w-40" />
+                                <div className="flex items-center space-x-2">
+                                    <Mail className="h-5 w-5 text-blue-500" />
+                                    <a href="mailto:phonghoatieu@saigonnewport.com.vn" className="text-gray-600 hover:text-blue-500">
+                                        phonghoatieu@saigonnewport.com.vn
+                                    </a>
+                                </div>
+                                <div className="flex items-start space-x-2">
+                                    <MapPin className="h-5 w-5 text-blue-500 mt-1" />
+                                    <span className="text-gray-600">
+                                        470 Đồng Văn Cống, phường Thạnh Mỹ Lợi, Thủ Đức, TP. HCM
+                                    </span>
+                                </div>
                             </div>
 
-                            <p className='pt-6 text-end' >Hotline: 028 37423565</p>
-                            <p className='text-end'>Fax: (+84) 28.37423565</p>
-                            <div className='inline-flex space-x-4 text-end items-end pl-10'>
-                                <FaFacebookF className="text-[#4758ef]" />
-                                <CiYoutube className="text-[#4758ef]" />
-                                <FaInstagram className="text-[#4758ef]" />
-                                <FaLinkedinIn className="text-[#4758ef]" />
-                                <AiOutlineMail className="text-[#4758ef]" />
-                                <SiZalo className="text-[#4758ef]" />
+                            <div className="flex flex-col space-y-2">
+                                <div className="flex justify-end space-x-4">
+                                    <div className='min-w-full flex-grow'>
+                                        <select className="w-full p-2 border rounded-md">
+                                            <option>Công ty hoa tiêu tân cảng </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className="flex justify-end space-x-4">
+                                    <div className="text-blue-600">
+                                        Hotline: <a href="tel:02837423565" className="hover:underline">028 37423565</a>
+                                    </div>
+                                </div>
+                                <div className="flex justify-end space-x-4">
+                                    <div className="text-blue-600">
+                                        Fax: <span>(+84) 28.37423566</span>
+                                    </div>
+                                </div>
+                                <div className="flex justify-end space-x-4">
+                                    <a href="#" className="text-blue-500 hover:text-blue-700">
+                                        <FaFacebookF className="text-[#4758ef]" />
+                                    </a>
+                                    <a href="#" className="text-red-500 hover:text-red-700">
+                                        <CiYoutube className="text-[#4758ef]" />
+                                    </a>
+                                    <a href="#" className="text-pink-500 hover:text-pink-700">
+                                        <FaInstagram className="text-[#4758ef]" />
+                                    </a>
+                                    <a href="#" className="text-blue-700 hover:text-blue-900">
+                                        <FaLinkedinIn className="text-[#4758ef]" />
+                                    </a>
+                                    <a href="#" className="text-gray-500 hover:text-gray-700">
+                                        <AiOutlineMail className="text-[#4758ef]" />
+                                    </a>
+                                    <a href="#" className="text-blue-400 hover:text-blue-600">
+                                        <SiZalo className="text-[#4758ef]" />
+                                    </a>
+                                </div>
                             </div>
+
                         </div>
                     </div>
 
-                    <div className='inline-flex space-x-4'>
-                        <p>© Copyright 2023 – CÔNG TY TNHH MỘT THÀNH VIÊN HOA TIÊU TÂN CẢNG</p>
-                        <p>Quy định & điều khoản</p>
-                        <p>Chính sách bảo mật</p>
-                        <p>Chính sách cookie</p>
-                        <p>Sitemap</p>
-                        <p>Tổng công ty</p>
+                    <div className="border-t">
+                        <div className="container mx-auto px-4 py-4">
+                            <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0 text-sm text-gray-600">
+                                <div>
+                                    © Copyright 2023 - CÔNG TY TNHH MỘT THÀNH VIÊN HOA TIÊU TÂN CẢNG
+                                </div>
+                                <div className="flex flex-wrap justify-center md:justify-end gap-4">
+                                    <a href="#" className="hover:text-blue-500">Quy định & điều khoản</a>
+                                    <a href="#" className="hover:text-blue-500">Chính sách bảo mật</a>
+                                    <a href="#" className="hover:text-blue-500">Chính sách cookie</a>
+                                    <a href="#" className="hover:text-blue-500">Sitemap</a>
+                                    <a href="#" className="hover:text-blue-500">Tổng công ty</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </footer>
