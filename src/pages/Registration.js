@@ -1,5 +1,5 @@
 import logo from '../logo-black.svg';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -14,7 +14,8 @@ function Registration() {
     const [showErrorNameHub, setshowErrorNameHub] = useState(false);
     const [showErrorSerialHub, setShowErrorSerialHub] = useState(false);
     const [startAnimation, setStartAnimation] = useState(false);
-    const [showButtons, setShowButtons] = useState(false);
+
+    const isFormValid = nameHub.trim() !== '' && serialNumber.trim() !== '';
 
     const handleSubmit = () => {
         const hubNameExists = hubs.some(hub =>
@@ -56,7 +57,6 @@ function Registration() {
         // Start registration animation
         setTimeout(() => {
             setShowRegistered(true);
-            setShowButtons(true);
         }, 4000);
         console.log(hubs);
     }
@@ -113,8 +113,12 @@ function Registration() {
                     <div className='pl-32'>
                         <button
                             onClick={handleSubmit}
+                            disabled={!isFormValid}
                             type="button"
-                            className="w-24 px-4 py-2 bg-gray-300 text-white rounded-md text-md hover:bg-gray-500 transition-colors"
+                            className={`w-24 px-4 py-2 rounded-md text-md transition-colors ${isFormValid
+                                    ? 'bg-[#ff6b4a] text-white hover:bg-[#ff8b6a]'
+                                    : 'bg-gray-300 text-white cursor-not-allowed'
+                                }`}
                         >
                             Register
                         </button>
@@ -142,12 +146,12 @@ function Registration() {
                                 </Link>
                             ) : (
                                 <div className="mt-4 flex space-x-4">
-                                    <Link to="/home">
+                                    <Link to="/">
                                         <button className="px-6 py-2 border border-gray-300 rounded-md hover:bg-gray-50">
                                             Home
                                         </button>
                                     </Link>
-                                    <Link to="/add-device">
+                                    <Link to="/register">
                                         <button className="px-6 py-2 bg-[#ff6b4a] text-white rounded-md hover:bg-[#ff8b6a]">
                                             Add device
                                         </button>
@@ -161,7 +165,6 @@ function Registration() {
                                 <div className="flex gap-8 items-center justify-center p-8">
                                     {!showRegistered && (
                                         <div className="relative w-40 h-40">
-                                            <div className="absolute w-full h-full rounded-full border-4 border-gray-200" />
                                             <div className="absolute w-full h-full rounded-full border-4 border-transparent border-t-[#ff6b4a] animate-[spin_4s_linear_forwards]" />
                                             <div className="absolute top-4 left-4 right-4 bottom-4 rounded-full border-4 border-transparent border-t-black animate-[spin_4s_linear_forwards]"
                                                 style={{ animationDelay: '0.2s' }}
@@ -173,7 +176,6 @@ function Registration() {
                                     )}
                                     {showRegistered && (
                                         <div className="relative w-40 h-40">
-                                            <div className="absolute w-full h-full rounded-full border-4 border-gray-200" />
                                             <div className="absolute w-full h-full rounded-full border-4 border-[#ff6b4a] 
                                   animate-[appearCircle_0.5s_ease-out_forwards]" />
                                             <div className="absolute top-4 left-4 right-4 bottom-4 rounded-full border-4 border-black 
