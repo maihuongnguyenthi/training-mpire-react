@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { XIcon } from '@heroicons/react/outline';
 import { FaSpinner } from 'react-icons/fa';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 function Register() {
   const listHubs = [
@@ -106,6 +108,21 @@ function Register() {
               </button>
             </div>
           </div>
+
+          <div className="flex justify-between items-center py-12 max-w-xl">
+            <h2 className="text-xl md:text-3xl font-medium text-gray-900">
+              or Register a new Hub
+            </h2>
+
+            <Link
+              to="/registration"
+              className="inline-flex items-center gap-2 text-gray-900 hover:text-gray-700 font-medium text-xl transition-colors"
+            >
+              Register
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
         </div>
       </div>
     </div>
