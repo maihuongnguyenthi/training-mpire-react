@@ -13,6 +13,8 @@ function Register() {
     { id: 4, name: 'Hub 4 Lorem ipsum dolor sit amet', status: 'Inactive' },
     { id: 5, name: 'Hub 5 Lorem ipsum dolor sit amet', status: 'Active' },
     { id: 6, name: 'Hub 6 Lorem ipsum dolor sit amet', status: 'Active' },
+    { id: 7, name: 'Hub 5 Lorem ipsum dolor sit amet', status: 'Active' },
+    { id: 8, name: 'Hub 6 Lorem ipsum dolor sit amet', status: 'Active' },
   ];
   const navigate = useNavigate();
   const [hubs, setHubs] = useState(listHubs);
@@ -39,7 +41,7 @@ function Register() {
   };
 
   return (
-    <div className="container min-h-screen mx-auto">
+    <div className="container min-h-screen mx-auto font-helvetica font-medium">
       <div className="pl-8">
         <img src={logo} alt="Logo" className="mb-20 w-32 h-24" />
       </div>
@@ -128,7 +130,7 @@ function Register() {
               className="inline-flex items-center gap-2 text-gray-900 hover:text-gray-700 font-[545] text-xl transition-colors"
             >
               Register
-              <ArrowRight className="w-6 h-10" />
+              <ArrowRight className="w-10 h-10" strokeWidth={1} />
             </Link>
           </div>
 

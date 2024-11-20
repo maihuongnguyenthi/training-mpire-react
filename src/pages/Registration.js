@@ -66,13 +66,12 @@ function Registration() {
         }, 4000);
     }
 
-
     return (
-        <div className=" min-h-screen bg-gray-100 px-4 pb-2 md:pb-20 min-w-full">
+        <div className=" min-h-screen bg-gray-100 px-4 pb-2 md:pb-20 min-w-full font-helvetica font-medium">
             <div className="md:pl-8 pb-4">
                 <img src={logo} alt="Logo" className="w-32 h-24" />
                 <Link to="/register" className="flex items-center text-gray-900 hover:text-orange-600">
-                    <ArrowLeft className="w-7 h-7" />
+                    <ArrowLeft className="w-10 h-10" strokeWidth={1} />
                     <span className="ml-1 text-md">Back</span>
                 </Link>
             </div>
@@ -81,7 +80,7 @@ function Registration() {
                 <h1 className="mb-12 text-[#222021] text-[35px] font-medium leading-10">Smarthub registration</h1>
                 <form className={`${showErrorNameHub ? 'space-y-1' : 'space-y-8 '}`}>
                     <div className='flex'>
-                        <label className="max-w-20 min-w-20 md:max-w-40 md:min-w-40 my-auto text-[#222021] text-lg font-semibold leading-[23px]">
+                        <label className="max-w-20 min-w-20 md:max-w-40 md:min-w-40 my-auto text-[#222021] text-md font-medium leading-[23px]">
                             Hub name*
                         </label>
                         <input
@@ -98,7 +97,7 @@ function Registration() {
                         </div>
                     )}
                     <div className='flex'>
-                        <label className="max-w-20 min-w-20 md:max-w-40 md:min-w-40 my-auto text-[#222021] text-lg font-semibold leading-[23px]">
+                        <label className="max-w-20 min-w-20 md:max-w-40 md:min-w-40 my-auto text-[#222021] text-md font-medium leading-[23px]">
                             Serial number*
                         </label>
                         <input
@@ -146,8 +145,8 @@ function Registration() {
                             </ol>
                             {!showRegistered ? (
                                 <Link to="/register" className="mt-4 flex space-x-2 items-center text-gray-900 hover:text-gray-900">
-                                    <span className="text-lg font-semibold ml-1">Skip and Save</span>
-                                    <ArrowRight className="w-7 h-7" />
+                                    <span className="text-lg font-medium ml-1">Skip and Save</span>
+                                    <ArrowRight className="w-10 h-10 " strokeWidth={1}/>
                                 </Link>
                             ) : (
                                 <div className="mt-52 md:mt-4 flex space-x-4 py-2 justify-center md:justify-start">

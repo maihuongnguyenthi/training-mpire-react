@@ -23,7 +23,7 @@ const Layout = () => {
         setIsMenuOpen((prev) => !prev);
     };
     return (
-        <div>
+        <div className='font-helvetica font-medium'>
             <header>
                 <div className="fixed top-0 z-50 shadow-md min-h-24 min-w-full bg-white flex justify-between text-[#4758ef] font-normal px-0 md:px-4 md:pr-12 lg:px-16">
                     <ul className="my-auto">

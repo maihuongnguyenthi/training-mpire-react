@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Helvetica Neue LT Pro';
+  src: url('./fonts/HelveticaNeueLTPro-Md.woff2') format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Pro';
+  src: url('./fonts/HelveticaNeueLTPro-Th.woff2') format('woff2');
+  font-weight: 100;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -14,7 +26,7 @@ html, body {
 }
 
 body {
-  background-color: #ccc;
+  background-color: #ffffff;
 }
 
 .scrollbar-custom::-webkit-scrollbar {

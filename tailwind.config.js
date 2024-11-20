@@ -19,7 +19,10 @@ module.exports = {
         'spin': 'spin 4s linear forwards',
         'spinInfinite': 'spin 1s linear infinite',
         'appearCircle': 'appearCircle 0.5s ease-out forwards'
-      }
+      },
+      fontFamily: {
+        helvetica: ['Helvetica Neue LT Pro', 'sans-serif'],
+      },
     }
   },
   plugins: [require('tailwind-scrollbar'),],
