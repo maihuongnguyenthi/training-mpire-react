@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Outlet } from "react-router-dom";
-import logoTanCang from '../logoTanCang.jpg';
-import imgFooter from '../imgFooter.jpg';
+import logoTanCang from '../images/logoTanCang.jpg';
+import imgFooter from '../images/imgFooter.jpg';
 import { FaSearch, FaBars, FaTimes, FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { Mail, MapPin } from 'lucide-react';
 import { CiYoutube } from "react-icons/ci";

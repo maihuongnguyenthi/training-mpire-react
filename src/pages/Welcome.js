@@ -1,5 +1,5 @@
-import logo from '../logo.svg';
-import backgroundImageWelCome from '../backgroundImageWelCome.jpg'
+import logo from '../images/logo.svg';
+import backgroundImageWelCome from '../images/backgroundImageWelCome.jpg'
 import { Link } from 'react-router-dom';
 
 function Welcome() {

@@ -1,4 +1,4 @@
-import logo from '../logo-black.svg';
+import logo from '../images/logo-black.svg';
 import React, { useState } from 'react';
 import { XIcon } from '@heroicons/react/outline';
 import { FaSpinner } from 'react-icons/fa';
