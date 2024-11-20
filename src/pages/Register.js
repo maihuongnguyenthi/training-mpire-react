@@ -2,8 +2,7 @@ import logo from '../images/logo-black.svg';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { XIcon } from '@heroicons/react/outline';
-import { FaSpinner } from 'react-icons/fa';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 function Register() {
@@ -56,19 +55,19 @@ function Register() {
                 >
                   {hub.status === 'Restarting...' ? (
                     <div className="mr-4 mt-1 flex items-center">
-                      <FaSpinner className="animate-spin text-orange-500 w-4 h-5" />
+                      <Loader2 className="animate-spinInfinite w-5 h-5 text-orange-500" />
                     </div>
                   ) : (
-                    <div
-                      className={`w-4 h-4 border-2 rounded-full flex items-center justify-center mr-4 mt-1
-                        ${hub.status === 'Inactive' ? 'border-gray-400 cursor-not-allowed opacity-50' : 'border-black cursor-pointer'}
-                      `}
-                      onClick={() => hub.status === 'Active' && setSelectedHub(hub.id)}
-                    >
-                      {selectedHub === hub.id && (
-                        <div className="w-2 h-2 bg-black rounded-full"></div>
-                      )}
-                    </div>
+                    <input
+                      type="radio"
+                      name="hub"
+                      checked={selectedHub === hub.id}
+                      disabled={hub.status === 'Inactive' || hub.status === 'Restarting...'}
+                      onChange={() => setSelectedHub(hub.id)}
+                      className={`appearance-none w-4 h-4 rounded-full border-2 border-gray-800 checked:border-gray-900 checked:bg-white checked:before:content-['']
+                          checked:before:block checked:before:w-2 checked:before:h-2 checked:before:rounded-full checked:before:bg-gray-900 checked:before:mx-auto
+                          checked:before:mt-[2px] cursor-pointer mr-4 mt-1 ${hub.status === 'Inactive' ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    />
                   )}
                   <div className="flex flex-col flex-shrink flex-grow space-y-3">
                     <span className={`font-medium grow shrink basis-0 h-[30px] text-lg leading-[23px] 
