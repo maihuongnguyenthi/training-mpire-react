@@ -13,7 +13,7 @@ function Welcome() {
       }}
 
     >
-      <div className="container">
+      <div className="container font-helvetica font-medium">
         <div className="text-white px-16 md:px-48 lg:px-80 space-y-8 font-medium">
           <img src={logo} alt="Logo" className="mb-md w-32 h-24" />
           <div className="text-5xl md:text-7xl lg:text-8xl">Welcome to<br />Advanced Flow</div>
