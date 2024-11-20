@@ -4,18 +4,21 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 function Registration() {
-    const [showRegistered, setShowRegistered] = useState(false);
-    const [showModelClause, setshowModelClause] = useState(false);
     const [nameHub, setnameHub] = useState('');
     const [serialNumber, setserialNumber] = useState('');
-    const [hubs, setHubs] = useState([])
+    const [hubs, setHubs] = useState(() => {
+        const storageHubs = JSON.parse(localStorage.getItem('hubs'))
+        return storageHubs ?? [];
+    })
+    const [showRegistered, setShowRegistered] = useState(false);
+    const [showModelClause, setshowModelClause] = useState(false);
     const [errorNameHub, seterrorNameHub] = useState('');
     const [errorSerialHub, seterrorSerialHub] = useState('');
     const [showErrorNameHub, setshowErrorNameHub] = useState(false);
     const [showErrorSerialHub, setShowErrorSerialHub] = useState(false);
     const [startAnimation, setStartAnimation] = useState(false);
 
-    const isFormValid = nameHub.trim() !== '' && serialNumber.trim() !== '';
+    const isFormValid = nameHub.trim() !== '' && serialNumber.trim() !== '' && !showModelClause;
 
     const handleSubmit = () => {
         const hubNameExists = hubs.some(hub =>
@@ -47,18 +50,20 @@ function Registration() {
             setshowModelClause(false);
             return;
         }
-        setHubs([...hubs,
-        {
-            nameHub,
-            serialNumber
-        }])
+        setHubs(prev => {
+            const newHubs = [...prev, { nameHub, serialNumber }]
+
+            //Save to local storage
+            const jsonHubs = JSON.stringify(newHubs)
+            localStorage.setItem("hubs", jsonHubs)
+            return newHubs
+        })
         setshowModelClause(true);
         setStartAnimation(true);
         // Start registration animation
         setTimeout(() => {
             setShowRegistered(true);
         }, 4000);
-        console.log(hubs);
     }
 
 
@@ -116,8 +121,8 @@ function Registration() {
                             disabled={!isFormValid}
                             type="button"
                             className={`w-24 px-4 py-2 rounded-md text-md transition-colors ${isFormValid
-                                    ? 'bg-[#ff6b4a] text-white hover:bg-[#ff8b6a]'
-                                    : 'bg-gray-300 text-white cursor-not-allowed'
+                                ? 'bg-[#ff6b4a] text-white hover:bg-[#ff8b6a]'
+                                : 'bg-gray-300 text-white cursor-not-allowed'
                                 }`}
                         >
                             Register
