@@ -77,11 +77,11 @@ function Registration() {
                 </Link>
             </div>
 
-            <div className="max-w-[670px] mx-auto bg-white rounded-lg shadow-lg p-4 md:p-8">
+            <div className="max-w-[670px] mx-auto bg-white rounded-lg shadow-lg p-5 md:p-8">
                 <h1 className="mb-12 text-[#222021] text-[35px] font-medium leading-10">Smarthub registration</h1>
-                <form className={`mb-8 ${showErrorNameHub ? 'space-y-1' : 'space-y-8 '}`}>
+                <form className={`${showErrorNameHub ? 'space-y-1' : 'space-y-8 '}`}>
                     <div className='flex'>
-                        <label className="max-w-20 min-w-20 md:max-w-32 md:min-w-32 my-auto text-[#222021] text-lg font-medium leading-[23px]">
+                        <label className="max-w-20 min-w-20 md:max-w-40 md:min-w-40 my-auto text-[#222021] text-lg font-semibold leading-[23px]">
                             Hub name*
                         </label>
                         <input
@@ -89,16 +89,16 @@ function Registration() {
                             value={nameHub}
                             placeholder="Enter Hub name"
                             onChange={e => setnameHub(e.target.value)}
-                            className="w-full px-3 py-2 border border-[#aeadad]"
+                            className={`w-full px-4 py-2 border-[1px] border-[#aeadad] ${showErrorNameHub ? 'border-[#c32431]' : 'border-[#aeadad]'}`}
                         />
                     </div>
                     {showErrorNameHub && (
-                        <div className="pl-20 md:pl-32 pb-4">
+                        <div className="pl-20 md:pl-40 pb-4">
                             <div className=" text-[#c32431] text-md font-medium">{errorNameHub}</div>
                         </div>
                     )}
                     <div className='flex'>
-                        <label className="max-w-20 min-w-20 md:max-w-32 md:min-w-32 my-auto text-[#222021] text-lg font-medium leading-[23px]">
+                        <label className="max-w-20 min-w-20 md:max-w-40 md:min-w-40 my-auto text-[#222021] text-lg font-semibold leading-[23px]">
                             Serial number*
                         </label>
                         <input
@@ -106,15 +106,15 @@ function Registration() {
                             value={serialNumber}
                             placeholder="Enter serial number"
                             onChange={e => setserialNumber(e.target.value)}
-                            className="w-full px-3 py-2 border border-[#aeadad]"
+                            className={`w-full px-4 py-2 border-[1px] border-[#aeadad] ${errorSerialHub ? 'border-[#c32431]' : 'border-[#aeadad]'}`}
                         />
                     </div>
                     {showErrorSerialHub && (
-                        <div className="pl-20 md:pl-32">
+                        <div className="pl-20 md:pl-40">
                             <div className=" text-[#c32431] text-md font-medium">{errorSerialHub}</div>
                         </div>
                     )}
-                    <div className='ml-20 md:ml-32 py-4'>
+                    <div className='ml-20 md:ml-40 pt-4'>
                         <button
                             onClick={handleSubmit}
                             disabled={!isFormValid}
@@ -128,8 +128,9 @@ function Registration() {
                         </button>
                     </div>
                 </form>
-                <div className='border-t-[1px] border-gray-300 shadow-lg mb-10'></div>
+
                 <div className={!showModelClause ? 'hidden' : ''}>
+                    <div className='border-t-[1px] border-gray-300 shadow-lg my-10'></div>
                     <div className="md:flex justify-between gap-8">
                         <div className="flex-1">
                             <p className="mb-5 text-[#222021] text-2xl font-semibold leading-[29px]">Activate your hub</p>
