@@ -75,8 +75,8 @@ function Register() {
                       {hub.name}
                     </span>
                     <span
-                      className={`text-sm grow shrink ${hub.status === 'Active'
-                        ? 'text-red-500'
+                      className={`text-md grow shrink font-medium ${hub.status === 'Active'
+                        ? 'text-orange-600'
                         : hub.status === 'Restarting...'
                           ? 'text-black cursor-not-allowed'
                           : 'text-gray-400'
@@ -87,7 +87,7 @@ function Register() {
                   </div>
                   {hub.status === 'Inactive' && (
                     <button className="pt-5" onClick={() => removeInactiveHub(hub.id)}>
-                      <XIcon className="w-5 h-5 md:w-6 md:h-6 text-gray-400 hover:text-red-500" />
+                      <XIcon className="w-5 h-5 md:w-6 md:h-6 text-gray-400 hover:text-orange-600" />
                     </button>
                   )}
                 </div>
@@ -108,7 +108,7 @@ function Register() {
             </div>
           </div>
 
-          <div className="flex justify-between items-center py-12 max-w-[652px]">
+          <div className="flex justify-between items-center px-4 md:px-0 py-12 max-w-[652px]">
             <div className="text-xl md:text-3xl text-gray-900">
               or Register a new Hub
             </div>

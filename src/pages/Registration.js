@@ -71,7 +71,7 @@ function Registration() {
         <div className=" min-h-screen bg-gray-100 px-4 pb-2 md:pb-20 min-w-full">
             <div className="md:pl-8 pb-4">
                 <img src={logo} alt="Logo" className="w-32 h-24" />
-                <Link to="/register" className="flex items-center text-gray-700 hover:text-gray-900">
+                <Link to="/register" className="flex items-center text-gray-900 hover:text-orange-600">
                     <ArrowLeft className="w-7 h-7" />
                     <span className="ml-1 text-md">Back</span>
                 </Link>
@@ -94,7 +94,7 @@ function Registration() {
                     </div>
                     {showErrorNameHub && (
                         <div className="pl-20 md:pl-32 pb-4">
-                            <span className=" text-[#c32431] text-sm font-[550]">{errorNameHub}</span>
+                            <div className=" text-[#c32431] text-md font-medium">{errorNameHub}</div>
                         </div>
                     )}
                     <div className='flex'>
@@ -111,10 +111,10 @@ function Registration() {
                     </div>
                     {showErrorSerialHub && (
                         <div className="pl-20 md:pl-32">
-                            <span className="text-[#c32431] text-sm font-[550]">{errorSerialHub}</span>
+                            <div className=" text-[#c32431] text-md font-medium">{errorSerialHub}</div>
                         </div>
                     )}
-                    <div className='ml-20 md:ml-32 pt-10'>
+                    <div className='ml-20 md:ml-32 py-4'>
                         <button
                             onClick={handleSubmit}
                             disabled={!isFormValid}
@@ -128,12 +128,12 @@ function Registration() {
                         </button>
                     </div>
                 </form>
-
+                <div className='border-t-[1px] border-gray-300 shadow-lg mb-10'></div>
                 <div className={!showModelClause ? 'hidden' : ''}>
                     <div className="md:flex justify-between gap-8">
                         <div className="flex-1">
-                            <p className="mb-4 text-[#222021] text-2xl font-semibold leading-[29px]">Activate your hub</p>
-                            <ol className="list-decimal list-inside space-y-3 md:space-y-2 pl-1 text-[#222021] text-md font-medium leading-none">
+                            <p className="mb-5 text-[#222021] text-2xl font-semibold leading-[29px]">Activate your hub</p>
+                            <ol className="list-decimal list-inside space-y-3 md:space-y-3 pl-1 text-[#222021] text-md font-medium leading-none">
                                 <li>Turn on your hub</li>
                                 <li>Connect your hub to internet</li>
                                 <li>Waiting for pairing</li>
