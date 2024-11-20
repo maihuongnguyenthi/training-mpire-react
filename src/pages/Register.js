@@ -38,17 +38,17 @@ function Register() {
   return (
     <div className="container min-h-screen mx-auto">
       <div className="pl-8">
-        <img src={logo} alt="Logo" className="mb-20 w-24 h-24" />
+        <img src={logo} alt="Logo" className="mb-20 w-32 h-24" />
       </div>
 
-      <div className="flex flex-wrap space-y-4 md:px-2">
-        <div className="flex-1 flex items-center text-4xl md:text-6xl">
+      <div className="flex flex-wrap mt-[-50px] space-y-4 md:px-2">
+        <div className="flex-1 flex md:mt-52 text-4xl md:text-6xl">
           <div className="mx-auto text-center">Choose Hub to <br />create your flow</div>
         </div>
 
         <div className="flex-1">
-          <div className="bg-white shadow-lg rounded-lg p-10 ml-0 max-w-2xl">
-            <div className="scrollbar-custom space-y-4 overflow-y-auto max-h-60 pr-4">
+          <div className="bg-white shadow-lg rounded-lg p-10 pb-0 ml-0 max-w-[652px] min-h-[480px]">
+            <div className="scrollbar-custom space-y-4 overflow-y-auto max-h-96 pr-4">
               {hubs.map((hub) => (
                 <div
                   key={hub.id}
@@ -95,11 +95,11 @@ function Register() {
               ))}
             </div>
 
-            <div className="min-w-80 flex justify-center mt-6">
+            <div className="min-w-80 flex justify-center mt-12">
               <button
                 onClick={() => handleSubmut(selectedHub)}
-                className={`pb-1 rounded-md w-24 h-10 text-center text-lg font-medium leading-[23px] ${selectedHub === null
-                  ? 'bg-[#f5f5f5] text-black font-semibold border-2 border-black cursor-not-allowed'
+                className={`px-4 py-1 rounded-lg text-md transition-colors w-32  text-center text-lg font-[540] ${selectedHub === null
+                  ? 'bg-[#f5f5f5] text-gray-900 border-[1px] border-gray-600 cursor-not-allowed'
                   : 'bg-orange-500 hover:bg-orange-600 text-white'
                   }`}
                 disabled={selectedHub === null}
@@ -109,17 +109,17 @@ function Register() {
             </div>
           </div>
 
-          <div className="flex justify-between items-center py-12 max-w-xl">
-            <h2 className="text-xl md:text-3xl font-medium text-gray-900">
+          <div className="flex justify-between items-center py-12 max-w-[652px]">
+            <div className="text-xl md:text-3xl text-gray-900">
               or Register a new Hub
-            </h2>
+            </div>
 
             <Link
               to="/registration"
-              className="inline-flex items-center gap-2 text-gray-900 hover:text-gray-700 font-medium text-xl transition-colors"
+              className="inline-flex items-center gap-2 text-gray-900 hover:text-gray-700 font-[545] text-xl transition-colors"
             >
               Register
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-6 h-10" />
             </Link>
           </div>
 
