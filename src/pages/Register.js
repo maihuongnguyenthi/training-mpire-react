@@ -1,4 +1,4 @@
-import logo from '../logo-black.svg';
+import logo from '../images/logo-black.svg';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { XIcon } from '@heroicons/react/outline';

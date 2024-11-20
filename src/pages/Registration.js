@@ -1,4 +1,4 @@
-import logo from '../logo-black.svg';
+import logo from '../images/logo-black.svg';
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
