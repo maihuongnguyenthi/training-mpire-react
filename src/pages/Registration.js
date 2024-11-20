@@ -77,12 +77,11 @@ function Registration() {
                 </Link>
             </div>
 
-            <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-4 md:p-8">
+            <div className="max-w-[670px] mx-auto bg-white rounded-lg shadow-lg p-4 md:p-8">
                 <h1 className="mb-12 text-[#222021] text-[35px] font-medium leading-10">Smarthub registration</h1>
-
-                <form className={`mb-8 ${showErrorNameHub ? 'space-y-2' : 'space-y-8 '}`}>
+                <form className={`mb-8 ${showErrorNameHub ? 'space-y-1' : 'space-y-8 '}`}>
                     <div className='flex'>
-                        <label className="max-w-20 min-w-20 md:max-w-32 md:min-w-32 my-auto mb-1 text-[#222021] text-lg font-medium leading-[23px]">
+                        <label className="max-w-20 min-w-20 md:max-w-32 md:min-w-32 my-auto text-[#222021] text-lg font-medium leading-[23px]">
                             Hub name*
                         </label>
                         <input
@@ -94,12 +93,12 @@ function Registration() {
                         />
                     </div>
                     {showErrorNameHub && (
-                        <div className="pl-20 md:pl-32 mt-1 pb-4">
-                            <span className="h-4 text-[#c32431] text-sm font-medium font-['Helvetica Neue LT Pro'] leading-none">{errorNameHub}</span>
+                        <div className="pl-20 md:pl-32 pb-4">
+                            <span className=" text-[#c32431] text-sm font-[550]">{errorNameHub}</span>
                         </div>
                     )}
                     <div className='flex'>
-                        <label className="max-w-20 min-w-20 md:max-w-32 md:min-w-32 my-auto mb-1 text-[#222021] text-lg font-medium leading-[23px]">
+                        <label className="max-w-20 min-w-20 md:max-w-32 md:min-w-32 my-auto text-[#222021] text-lg font-medium leading-[23px]">
                             Serial number*
                         </label>
                         <input
@@ -111,16 +110,16 @@ function Registration() {
                         />
                     </div>
                     {showErrorSerialHub && (
-                        <div className="pl-20 md:pl-32 mt-1">
-                            <span className="text-red-500 text-sm">{errorSerialHub}</span>
+                        <div className="pl-20 md:pl-32">
+                            <span className="text-[#c32431] text-sm font-[550]">{errorSerialHub}</span>
                         </div>
                     )}
-                    <div className='ml-20 md:ml-32'>
+                    <div className='ml-20 md:ml-32 pt-10'>
                         <button
                             onClick={handleSubmit}
                             disabled={!isFormValid}
                             type="button"
-                            className={`w-32 px-4 py-2 rounded-md text-md transition-colors ${isFormValid
+                            className={`w-32 px-4 py-2 rounded-lg text-md transition-colors ${isFormValid
                                 ? 'bg-[#ff6b4a] text-white hover:bg-[#ff8b6a]'
                                 : 'bg-[#222021]/20 text-white cursor-not-allowed'
                                 }`}
