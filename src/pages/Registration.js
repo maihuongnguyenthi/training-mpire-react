@@ -77,12 +77,12 @@ function Registration() {
                 </Link>
             </div>
 
-            <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+            <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-4 md:p-8">
                 <h1 className="mb-12 text-[#222021] text-[35px] font-medium leading-10">Smarthub registration</h1>
 
                 <form className={`mb-8 ${showErrorNameHub ? 'space-y-2' : 'space-y-8 '}`}>
-                    <div className='flex '>
-                        <label className="min-w-20 md:min-w-32 my-auto mb-1 text-[#222021] text-lg font-medium leading-[23px]">
+                    <div className='flex'>
+                        <label className="max-w-20 min-w-20 md:max-w-32 md:min-w-32 my-auto mb-1 text-[#222021] text-lg font-medium leading-[23px]">
                             Hub name*
                         </label>
                         <input
@@ -95,11 +95,11 @@ function Registration() {
                     </div>
                     {showErrorNameHub && (
                         <div className="pl-20 md:pl-32 mt-1 pb-4">
-                            <span className="text-red-500 text-sm">{errorNameHub}</span>
+                            <span className="h-4 text-[#c32431] text-sm font-medium font-['Helvetica Neue LT Pro'] leading-none">{errorNameHub}</span>
                         </div>
                     )}
                     <div className='flex'>
-                        <label className="min-w-20 md:min-w-32 my-auto mb-1 text-[#222021] text-lg font-medium leading-[23px]">
+                        <label className="max-w-20 min-w-20 md:max-w-32 md:min-w-32 my-auto mb-1 text-[#222021] text-lg font-medium leading-[23px]">
                             Serial number*
                         </label>
                         <input
@@ -115,7 +115,7 @@ function Registration() {
                             <span className="text-red-500 text-sm">{errorSerialHub}</span>
                         </div>
                     )}
-                    <div className='ml-20 md:pl-32'>
+                    <div className='ml-20 md:ml-32'>
                         <button
                             onClick={handleSubmit}
                             disabled={!isFormValid}
@@ -150,7 +150,7 @@ function Registration() {
                                     <ArrowRight className="w-7 h-7" />
                                 </Link>
                             ) : (
-                                <div className="mt-52 md:mt-4 flex space-x-4 py-2 ">
+                                <div className="mt-52 md:mt-4 flex space-x-4 py-2 justify-center md:justify-start">
                                     <Link to="/">
                                         <button className="min-w-32 md:px-6 py-2 border border-gray-900 rounded-md hover:bg-gray-50">
                                             Home
