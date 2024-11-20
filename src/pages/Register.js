@@ -47,7 +47,7 @@ function Register() {
         </div>
 
         <div className="flex-1">
-          <div className="bg-white shadow-lg rounded-lg p-10 ml-0 max-w-xl">
+          <div className="bg-white shadow-lg rounded-lg p-10 ml-0 max-w-2xl">
             <div className="scrollbar-custom space-y-4 overflow-y-auto max-h-60 pr-4">
               {hubs.map((hub) => (
                 <div
